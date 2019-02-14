@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px #e3e3e3;
+
+  img {
+    width: 10vw;
+  }
+
+  & > div:last-child {
+    padding: 10px;
+  }
+}
