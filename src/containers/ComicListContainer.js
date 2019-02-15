@@ -15,7 +15,7 @@ export const GET_NEW_COMICS = gql`
 
 const ComicListContainer = () => (
   <Query query={GET_NEW_COMICS}>
-    {({ data, loading, error }) => {
+    {({ data, loading }) => {
       const { comics } = data
 
       if (loading) return <p>Loading...</p>

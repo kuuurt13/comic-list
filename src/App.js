@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
-import './App.scss'
-import ComicListContainer from './containers/ComicListContainer'
+import styles from './App.module.scss'
+import { ComicListContainer, SideBarContainer } from './containers'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <ComicListContainer />
+      <div className={styles.container}>
+        <aside>
+          <SideBarContainer />
+        </aside>
+        <main>
+          <ComicListContainer />
+        </main>
       </div>
     )
   }

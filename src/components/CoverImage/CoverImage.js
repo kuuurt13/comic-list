@@ -1,11 +1,12 @@
 import React, { useRef } from 'react'
+import PropTypes from 'prop-types'
 
 const {
   REACT_APP_COVER_IMAGE_URL: coverUrl,
   REACT_APP_COVER_DEFAULT_URL: defaultUrl
 } = process.env
 
-const ComicBook = ({ diamondId }) => {
+const CoverImage = ({ diamondId }) => {
   const ref = useRef(null)
 
   return (
@@ -18,4 +19,8 @@ const ComicBook = ({ diamondId }) => {
   )
 }
 
-export default ComicBook
+CoverImage.propTypes = {
+  diamondId: PropTypes.string
+}
+
+export default CoverImage
