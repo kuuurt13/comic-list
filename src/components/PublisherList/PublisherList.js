@@ -5,7 +5,7 @@ import styles from './PublisherList.module.scss'
 const PublisherList = ({ publishers }) => (
   <div className={styles.container}>
     {Object.keys(publishers).map(pub => (
-      <div>
+      <div key={pub}>
         {pub}: {publishers[pub]}
       </div>
     ))}

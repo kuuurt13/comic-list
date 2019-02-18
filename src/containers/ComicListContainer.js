@@ -1,17 +1,7 @@
 import React from 'react'
 import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
 import { ComicBook } from '../components'
-
-export const GET_NEW_COMICS = gql`
-  query newComics {
-    comics: new {
-      diamondId
-      title
-      publisher
-    }
-  }
-`
+import { GET_NEW_COMICS } from '../graphql/queries'
 
 const ComicListContainer = () => (
   <Query query={GET_NEW_COMICS}>

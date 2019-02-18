@@ -1,15 +1,7 @@
 import React from 'react'
 import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
 import { PublisherList } from '../components'
-
-export const GET_PUBLISHERS = gql`
-  query getPublisher {
-    publishers: new {
-      publisher
-    }
-  }
-`
+import { GET_PUBLISHERS } from '../graphql/queries'
 
 const groupByPublisher = publishers =>
   publishers.reduce(
